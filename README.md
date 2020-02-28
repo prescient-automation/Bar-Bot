@@ -18,16 +18,25 @@ Make sure the github repo doesnt have credentials file for the bot to communicat
 _______________________________________________________________
 
 
-Running
+# Running
+
 Assuming you have the requirements installed - if you would like to run the code without going through the tutorial and building it from scratch run the following commands:
 
+
 Train the chatbot:
+
 $ rasa train
+
 Launch the action server:
+
 $ rasa run actions
+
 Launch the chatbot in a different terminal:
+
 $ rasa shell --endpoint endpoints.yml
-Files
+
+# Files
+
 workspace
 ├── data
 │ ├── nlu.md
@@ -42,6 +51,6 @@ workspace
 ├── LICENCE
 └── README.rst
 
- For any doubts or queries related to the topic, feel free to leave a comment below in the comment section.  For any further information or queries you can also connect with us at info@prescient-automation.com
+For any doubts or queries related to the topic, feel free to leave a comment below in the comment section.  For any further information or queries you can also connect with us at info@prescient-automation.com
 
 Lets Learn For Free...

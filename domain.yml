@@ -1,0 +1,77 @@
+intents:
+- name
+- starter
+- greet
+- food
+- email id
+- table
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- drinks
+entities:
+- PERSON
+- drinks
+- email
+- food
+- table
+slots:
+  PERSON:
+    type: unfeaturized
+  drinks:
+    type: text
+  email:
+    type: unfeaturized
+  food:
+    type: text
+  table:
+    type: float
+    max_value: 1.0
+    min_value: 0.0
+templates:
+  utter_Question:
+  - buttons:
+    - payload: food
+      title: Order Food
+    - payload: drinks
+      title: Order Drinks
+    - payload: menu
+      title: Menu
+    text: I m RestoBar Bot. I m here to help you with your Order.
+  utter_ask_car:
+  - text: Which Car are you looking for?
+  utter_ask_table_no:
+  - image: https://s3.envato.com/files/64551152/Resto-Bar%20Table%20Number.jpg
+    text: Can i know your Table number. It will be something like this on your table.
+  utter_askemail:
+  - text: And your email id please?
+  utter_askname:
+  - text: Before we Begin Let me know your name?
+  utter_food_question:
+  - buttons:
+    - payload: /starter
+      title: Starter
+    - payload: /main course
+      title: Main Course
+    text: Okay. I have your details. What would you like to have. You can download
+      our food menu from www.prescient-automation.com/files/64551152/Resto-Bar%20Table%20Number.pdf.
+      Or you can choose from this menu.
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you? I m RestoBar bot.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- action_save_email
+- action_save_name
+- action_save_table_no
+- utter_Question
+- utter_ask_table_no
+- utter_askemail
+- utter_askname
+- utter_food_question
+- utter_goodbye
+- utter_greet
+- utter_iamabot
